@@ -11,6 +11,7 @@ import { FuelComponent } from './fuel/fuel.component';
 export const ROUTES: Routes = [
   { path: '', component: HomeComponent },
   { path: 'blog', component: BlogComponent },
+  { path: 'fuel', component: FuelComponent },
 ];
 
 @NgModule({
