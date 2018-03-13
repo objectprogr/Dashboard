@@ -8,6 +8,8 @@ import { Routes,RouterModule } from '@angular/router';
 import { BlogComponent } from './blog/blog.component';
 import { FuelComponent } from './fuel/fuel.component';
 
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+
 export const ROUTES: Routes = [
   { path: '', component: HomeComponent },
   { path: 'blog', component: BlogComponent },
@@ -25,7 +27,7 @@ export const ROUTES: Routes = [
     BrowserModule,
     RouterModule.forRoot(ROUTES),
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
