@@ -1,3 +1,36 @@
-<p>
-  fuel works!
-</p>
+
+<div class="container">
+  <p></p>
+<!-- Tabela -->
+<div class="container">
+  <table class="table table-striped table-bordered table-hover table-sm">
+    <thead class="thead-default ">
+    <tr>
+        <th class="col-width-2">id</th>
+        <th class="col-width-2">Data tankowania</th>
+        <th class="col-width-8">Szczegóły</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let post of _postsArray ">
+        <td class="text-center" >{{post.id}}</td>
+        <td class="text-center" >{{post.date}}</td>
+        <td>
+          <dl class="row">
+            <dt class="col-sm-3">Rodzaj: </dt>
+            <dd class="col-sm-9">{{post.fuel}} </dd>
+            <dt class="col-sm-3">Cena: </dt>
+            <dd class="col-sm-9">{{post.price}} zł</dd>
+            <dt class="col-sm-3">Litry: </dt>
+            <dd class="col-sm-9">{{post.liters}} </dd>   
+            <dt class="col-sm-3">Km: </dt>
+            <dd class="col-sm-9">{{post.amount}} </dd> 
+            <dt class="col-sm-3">Kwota tankowania: </dt>
+            <dd class="col-sm-9">{{post.rebate}} </dd>  
+          </dl>
+        </td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
