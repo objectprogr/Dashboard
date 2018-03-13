@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 
 import { Routes,RouterModule } from '@angular/router';
 import { BlogComponent } from './blog/blog.component';
+import { FuelComponent } from './fuel/fuel.component';
 
 export const ROUTES: Routes = [
   { path: '', component: HomeComponent },
@@ -16,7 +17,8 @@ export const ROUTES: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-    BlogComponent
+    BlogComponent,
+    FuelComponent
   ],
   imports: [
     BrowserModule,
