@@ -7,13 +7,13 @@ import { HomeComponent } from './home/home.component';
 import { Routes,RouterModule } from '@angular/router';
 import { BlogComponent } from './blog/blog.component';
 import { FuelComponent } from './fuel/fuel.component';
-
+import { HttpModule } from '@angular/http';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 export const ROUTES: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'blog', component: BlogComponent },
   { path: 'fuel', component: FuelComponent },
+  { path: 'blog', component: BlogComponent },
 ];
 
 @NgModule({
@@ -26,6 +26,7 @@ export const ROUTES: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(ROUTES),
+    HttpModule
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
