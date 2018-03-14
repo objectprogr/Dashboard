@@ -9,6 +9,7 @@ import { BlogComponent } from './blog/blog.component';
 import { FuelComponent } from './fuel/fuel.component';
 import { HttpModule } from '@angular/http';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 export const ROUTES: Routes = [
   { path: '', component: HomeComponent },
@@ -26,7 +27,8 @@ export const ROUTES: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(ROUTES),
-    HttpModule
+    HttpModule,
+    NgxPaginationModule
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
