@@ -18,6 +18,7 @@ export const ROUTES: Routes = [
   { path: 'fuel', component: FuelComponent },
   { path: 'fuel/:id', component: FuelDetailComponent},
   { path: 'blog', component: BlogComponent },
+  { path: 'github', component: GithubComponent }
 ];
 
 @NgModule({

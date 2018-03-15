@@ -1,0 +1,12 @@
+<div class="container">
+<table class="table">
+  <thead>
+    <th>1</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let post of _postsArray | async">
+      <td>{{post.ref}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
