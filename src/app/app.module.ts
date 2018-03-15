@@ -10,10 +10,13 @@ import { FuelComponent } from './fuel/fuel.component';
 import { HttpModule } from '@angular/http';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { FuelDetailComponent } from './fuel-detail/fuel-detail.component';
+import { GithubComponent } from './github/github.component';
 
 export const ROUTES: Routes = [
   { path: '', component: HomeComponent },
   { path: 'fuel', component: FuelComponent },
+  { path: 'fuel/:id', component: FuelDetailComponent},
   { path: 'blog', component: BlogComponent },
 ];
 
@@ -22,7 +25,9 @@ export const ROUTES: Routes = [
     AppComponent,
     HomeComponent,
     BlogComponent,
-    FuelComponent
+    FuelComponent,
+    FuelDetailComponent,
+    GithubComponent
   ],
   imports: [
     BrowserModule,

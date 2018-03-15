@@ -24,4 +24,5 @@ export class FuelComponent implements OnInit {
 ngOnInit(): void {
     this.getPost();
 }
+
 }
